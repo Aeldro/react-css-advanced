@@ -1,0 +1,68 @@
+$grass: green;
+$fire: orange;
+$water: blue;
+$electric: yellow;
+$psychic: rgb(167, 117, 125);
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+
+  #root {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+
+    main {
+      border: solid 1px black;
+      box-shadow: 0.3rem 0.3rem 1rem black;
+      border-radius: 1rem;
+
+      nav {
+        display: flex;
+        justify-content: center;
+
+        button {
+          margin: 1rem;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+
+        button:nth-child(1n):hover {
+          box-shadow: 0 0 2rem $grass;
+        }
+        button:nth-child(2n):hover {
+          box-shadow: 0 0 2rem $fire;
+        }
+        button:nth-child(3n):hover {
+          box-shadow: 0 0 2rem $water;
+        }
+        button:nth-child(4n):hover {
+          box-shadow: 0 0 2rem $electric;
+        }
+        button:nth-child(5n):hover {
+          box-shadow: 0 0 2rem $psychic;
+        }
+      }
+
+      figure {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        figcaption {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        img {
+          background: gray;
+        }
+      }
+    }
+  }
+}
